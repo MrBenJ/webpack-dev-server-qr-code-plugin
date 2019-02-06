@@ -1,0 +1,22 @@
+{
+  "name": "webpack-dev-server-qr-code",
+  "version": "0.1.0",
+  "description": "Custom WDS middleware that prints a QR code to your terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-dev-server",
+    "qr-code",
+    "qr",
+    "developement-tools"
+  ],
+  "author": "Ben Junya <bjunya@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "internal-ip": "^3.0.1",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
