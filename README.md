@@ -22,7 +22,10 @@ module.exports = {
   /** This option must be present in your config */
   devServer: {
     /** port MUST be specified */
-    port: 9000
+    port: 9000,
+
+    /** Your 'host' value must be '0.0.0.0' for this to work */
+    host: '0.0.0.0'
   },
   /* ... */
   plugins: [

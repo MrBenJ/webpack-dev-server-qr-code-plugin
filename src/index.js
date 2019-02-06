@@ -11,6 +11,13 @@ class PrintQRCodePlugin {
         }
         const port = compiler.options.devServer.port || '';
 
+        const isHostCorrect =
+          compiler.options.devServer.host.trim() === '0.0.0.0';
+
+        if (!isHostCorrect) {
+          console.warn('devServer.host must be "0.0.0.0" for webpack-dev-server-qr-code to work');
+          console.warn('QR Code will not be displayed :(');
+        }
         const ip = internalIp.v4().then( ip => {
           const address = `http://${ip}${port && `:${port}`}`;
 
