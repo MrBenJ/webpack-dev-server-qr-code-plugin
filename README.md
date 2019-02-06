@@ -1,5 +1,7 @@
 # QR Codes For Local Development
 
+![Demo](demo.gif)
+
 Need to test your site on a device?
 
 Stop typing out IP addresses and jump into the future with QR Codes!
