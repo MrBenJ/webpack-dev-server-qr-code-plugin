@@ -6,6 +6,7 @@
   "scripts": {
     "test": "test"
   },
+  "repository": "https://github.com/MrBenJ/webpack-dev-server-qr-code-plugin",
   "keywords": [
     "webpack",
     "webpack-dev-server",
