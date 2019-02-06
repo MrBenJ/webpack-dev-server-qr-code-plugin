@@ -14,6 +14,7 @@ npm install webpack-dev-server-qr-code
 Note: You must be using the `devServer` options inside of your webpack config for this to work!
 
 In your Webpack config, add this line:
+
 ```js
 const WebpackQRCodePlugin = require('webpack-dev-server-qr-code');
 
@@ -30,6 +31,14 @@ module.exports = {
     /** your other plugins */
   ]
 };
+
 ```
 
 Boom! You're finished!
+
+The plugin will print a QR code to your terminal when you first run the app, with your `local IP`.
+
+Make sure your mobile device is on the same network as your computer, and you should be set!
+
+Enjoy!
+
