@@ -1,5 +1,7 @@
 # QR Codes For Local Development
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MrBenJ/webpack-dev-server-qr-code-plugin.svg)](https://greenkeeper.io/)
+
 ![Demo](demo.gif)
 
 Need to test your site on a device?
