@@ -4,7 +4,7 @@
   "description": "Custom WDS middleware that prints a QR code to your terminal",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": "https://github.com/MrBenJ/webpack-dev-server-qr-code-plugin",
   "keywords": [
@@ -19,5 +19,8 @@
   "dependencies": {
     "internal-ip": "^3.0.1",
     "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
   }
 }
