@@ -47,14 +47,35 @@ The plugin will print a QR code to your terminal when you first run the app, wit
 
 Make sure your mobile device is on the same network as your computer, and you should be set!
 
-Enjoy!
+### Additional Options
+
+You can pass in an object to the constructor class like this:
+
+```
+module.exports = {
+  /** ... */
+  plugins: [
+    new WebpackQRCodePlugin({ size: 'small' })
+  ]
+}
+```
+
+The above code will generate a smaller QR code on your terminal. Here's the allowed options
+
+| key  | Type   | Required? | Description                                                                           | Default Value |
+|------|--------|-----------|---------------------------------------------------------------------------------------|---------------|
+| size | String | No        | Changes the size of the QR code printed out. Acceptable values are 'small' or 'large' | 'large'       |
+
+
+Any other options at this time will be ignored. If you put in a value that's not `large` or `small` for size, the plugin will still run, but still output a large sized QR code.
+
 
 ## Hack with me!
 
 Do you like:
 * Contributing to Open Source Software?
-* Alcohol?
 * Hacking and nerding out on Javascript?
+* Alcohol?
 
 If you like one or all of those things, start hacking with me on this project:
 
@@ -64,6 +85,8 @@ If you like one or all of those things, start hacking with me on this project:
 4. If you're new to Webpack plugins (this is my first one), check out [this guide from Webpack](https://webpack.js.org/contribute/writing-a-plugin/) on how to write a webpack.
 
 This is a pretty small and fun little plugin, so contributions are welcome from anyone and everyone, regardless of skill level, gender, race, etc. Everyone is welcome to use and hack away on this as they please :).
+
+If you contribute, I will buy you an alcoholic beverage of your choice, so what are you waiting for? ;)
 
 ### Unit tests
 

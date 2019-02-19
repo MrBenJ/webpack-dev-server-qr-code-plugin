@@ -12,6 +12,12 @@ function showDevServerWarning() {
 }
 
 class PrintQRCodePlugin {
+  constructor(options = {}) {
+    this.options = options;
+
+    this.apply = this.apply.bind(this);
+  }
+
   apply(compiler, callback) {
     if (compiler.options.devServer) {
       let didFire = false;
@@ -34,7 +40,9 @@ class PrintQRCodePlugin {
         const ip = internalIp.v4().then( ip => {
           const address = `http://${ip}${port && `:${port}`}`;
 
-          qrCode.generate(address, code => {
+          const { size } = this.options;
+
+          qrCode.generate(address, { small: size === 'small'}, code => {
             console.log('QR Code generated');
             console.log('Scan code below to visit', address);
             console.log(code);

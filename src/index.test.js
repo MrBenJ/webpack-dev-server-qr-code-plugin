@@ -8,7 +8,7 @@ const hooks = {
 
 describe('PrintQRCodePlugin tests', () => {
   it('Works with happy path', done => {
-    const i = new PrintQRCodePlugin();
+    const i = new PrintQRCodePlugin({ size: 'small' });
 
     const options = {
       devServer: {
@@ -47,5 +47,13 @@ describe('PrintQRCodePlugin tests', () => {
     i.apply({ options, hooks }, done);
 
     expect(spy).toHaveBeenCalled();
+  });
+
+  describe('Using options', () => {
+    it('Can read options on the instance level', () => {
+      const i = new PrintQRCodePlugin({ size: 'small'} );
+
+      expect(i.options).toEqual({size: 'small'});
+    });
   });
 });
